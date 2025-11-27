@@ -10,9 +10,9 @@ if len(sys.argv) == 4:
         sys.exit(1)
 else:
 
-    principal = float(input("Enter the principal amount: "))
-    rate = float(input("Enter the rate of interest (in %): "))
-    time = float(input("Enter the time period (in years): "))
+    principal = float("Enter the principal amount: "))
+    rate = float("Enter the rate of interest (in %): "))
+    time = float("Enter the time period (in years): "))
 
 # Simple interest formula
 simple_interest = (principal * rate * time) / 100
