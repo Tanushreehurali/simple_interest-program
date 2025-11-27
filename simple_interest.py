@@ -1,20 +1,17 @@
 import sys
 
-if len(sys.argv) == 4:
-    try:
-        principal = float(sys.argv[1])
-        rate = float(sys.argv[2])
-        time = float(sys.argv[3])
-    except ValueError:
-        print("Error: principal, rate, and time must be numeric values.")
-        sys.exit(1)
-else:
+# Expecting: python simple_interest.py <principal> <rate> <time>
+if len(sys.argv) != 4:
+    print("Usage: python simple_interest.py <principal> <rate> <time>")
+    sys.exit(1)
 
-    principal = float("Enter the principal amount: "))
-    rate = float("Enter the rate of interest (in %): "))
-    time = float("Enter the time period (in years): "))
+principal = float(sys.argv[1])
+rate = float(sys.argv[2])
+time = float(sys.argv[3])
 
-# Simple interest formula
 simple_interest = (principal * rate * time) / 100
 
-print(f"The simple interest is: {simple_interest}")
+print(f"Principal: {principal}")
+print(f"Rate: {rate}")
+print(f"Time: {time}")
+print(f"Simple Interest: {simple_interest}")
